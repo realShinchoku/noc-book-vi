@@ -37,4 +37,14 @@ Trước tiên tôi sẽ xem xét một chút về OOP bằng cách mã hóa l�
 
 **Lớp** là mẫu để xây dựng các thực thể thực sự của các đối tượng. Hãy nghĩ về lớp như một khuôn bánh quy và các đối tượng như chính các chiếc bánh quy. Để tạo một đối tượng `Walker`, tôi sẽ bắt đầu bằng cách định nghĩa lớp `Walker` nghĩa là gì khi là một người đi bộ.
 
-<video src="https://natureofcode.com/examples/00_randomness/example_i_1_random_walk_traditional/"></video>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>
