@@ -63,9 +63,7 @@ nghĩa là gì khi là một người đi bộ.
 
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 <foreignObject width="100" height="100">
-    <html xmlns="http://www.w3.org/1999/xhtml">
-      <head>
-        <meta charset="utf-8" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
         <style>
           html, body {
            margin: 0;
@@ -75,8 +73,6 @@ nghĩa là gì khi là một người đi bộ.
             display: block;
           }
         </style>
-      </head>
-      <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
         <script>
           let walker;
@@ -112,7 +108,6 @@ nghĩa là gì khi là một người đi bộ.
             }
           }
         </script>
-      </body>
-    </html>
+    </div>
 </foreignObject>
 </svg>
