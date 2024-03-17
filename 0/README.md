@@ -61,4 +61,6 @@ có dữ liệu về vị trí của nó trên khung vẽ và chức năng như 
 tượng như chính các chiếc bánh quy. Để tạo một đối tượng `Walker`, tôi sẽ bắt đầu bằng cách định nghĩa lớp `Walker`
 nghĩa là gì khi là một người đi bộ.
 
-<video src="https://github.com/realShinchoku/noc-book-vi/blob/main/0/videos/random_walker.mp4" controls width='100%'></video>
+[//]: # (<video src="https://github.com/realShinchoku/noc-book-vi/blob/main/0/videos/random_walker.mp4" controls width='100%'></video>)
+[](https://github.com/realShinchoku/noc-book-vi/blob/main/0/videos/random_walker.mp4)
+[random_walker.mp4](videos%2Frandom_walker.mp4)
