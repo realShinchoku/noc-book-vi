@@ -18,4 +18,4 @@
 * [Chương 10](./10/README.md)
 * [Chương 11](./11/README.md)
 
-## Tiến độ (https://github.com/realShinchoku/noc-book-vi/issues/2)
+## [Tiến độ](https://github.com/realShinchoku/noc-book-vi/issues/2)
