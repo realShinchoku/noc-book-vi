@@ -70,7 +70,8 @@ tính khởi tạo của một đối tượng, giống như `setup()` thực hi
 
 ```javascript
 class Walker {
-    constructor() { // Các đối tượng có một hàm tạo nơi chúng được khởi tạo.
+    constructor()  // Các đối tượng có một hàm tạo nơi chúng được khởi tạo.
+    {
         this.x = width / 2; // Đối tượng có dữ liệu.
         this.y = height / 2;
     }
@@ -179,7 +180,8 @@ let walker; // Đối tượng Walker
 Sau đó tạo đối tượng trong `setup()` bằng cách tham chiếu đến tên lớp với toán tử `new`:
 
 ```javascript
-function setup() {  // Nhớ cách p5.js hoạt động không? setup() được thực hiện một lần khi bản phác thảo bắt đầu.
+function setup()   // Nhớ cách p5.js hoạt động không? setup() được thực hiện một lần khi bản phác thảo bắt đầu.
+{
     createCanvas(640, 240);
     walker = new Walker();  // Tạo Walker.
     background(255);
@@ -193,8 +195,9 @@ Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bư�
 [![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
 
 ```javascript
-function draw() {   // draw() sẽ lặp đi lặp lại mãi mãi (cho đến khi bạn thoát).
-                    // Gọi các hàm trên walker.
+function draw() // draw() sẽ lặp đi lặp lại mãi mãi (cho đến khi bạn thoát).
+{
+    // Gọi các hàm trên walker.
     walker.step();
     walker.show();
 }
