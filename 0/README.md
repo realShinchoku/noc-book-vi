@@ -63,11 +63,56 @@ nghĩa là gì khi là một người đi bộ.
 
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 <foreignObject width="100" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-        <ul>
-            <li>text</li>
-        </ul>
-        <!-- Other embed HTML element/text into SVG -->
-    </div>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+        <meta charset="utf-8" />
+        <style>
+          html, body {
+           margin: 0;
+           padding: 0;
+          }
+          canvas {
+            display: block;
+          }
+        </style>
+      </head>
+      <body>
+        <script>
+          let walker;
+          function setup() {
+            createCanvas(640, 240);
+            walker = new Walker();
+            background(255);
+          }
+          function draw() {
+            walker.step();
+            walker.show();
+          }
+          class Walker {
+            constructor() {
+              this.x = width / 2;
+              this.y = height / 2;
+            }
+            show() {
+              stroke(0);
+              point(this.x, this.y);
+            }
+            step() {
+              const choice = floor(random(4));
+              if (choice == 0) {
+                this.x++;
+              } else if (choice == 1) {
+                this.x--;
+              } else if (choice == 2) {
+                this.y++;
+              } else {
+                this.y--;
+              }
+            }
+          }
+        </script>
+      </body>
+    </html>
 </foreignObject>
 </svg>
