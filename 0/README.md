@@ -189,7 +189,7 @@ function setup() {  // Nhớ cách p5.js hoạt động không? setup() được
 
 Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bước và vẽ một chấm.
 
-Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
+## Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
 
 [![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
 

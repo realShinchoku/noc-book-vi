@@ -1,6 +1,13 @@
-﻿# Table of Contents
+﻿# THE **NATURE** OF CODE
+
+---
+
+## Mục lục
+
 * [Giới thiệu](./introduction/README.md)
 * [Chương 0: Sự ngẫu nhiên](./0/README.md)
+  * [Di chuyển ngẫu nhiên](./0/README.md#di-chuyển-ngẫu-nhiên)
+  * [Lớp `Walker`](./0/README.md##lớp-walker)
 * [Chương 1](./1/README.md)
 * [Chương 2](./2/README.md)
 * [Chương 3](./3/README.md)
