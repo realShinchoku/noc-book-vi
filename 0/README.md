@@ -193,14 +193,7 @@ Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bư�
 
 ## Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
 
-<a href="https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR">
-<img 
-    style="margin-left: auto;
-           margin-right: auto;
-           width: 100%;"
-    src="videos/random_walker.gif" 
-    alt="Our logo"/>
-</a>
+[![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
 
 ```javascript
 function draw() // draw() sẽ lặp đi lặp lại mãi mãi (cho đến khi bạn thoát).
