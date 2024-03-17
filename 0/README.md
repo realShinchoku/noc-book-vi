@@ -65,7 +65,6 @@ nghĩa là gì khi là một người đi bộ.
 <foreignObject width="100" height="100">
     <html xmlns="http://www.w3.org/1999/xhtml">
       <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
         <meta charset="utf-8" />
         <style>
           html, body {
@@ -78,6 +77,7 @@ nghĩa là gì khi là một người đi bộ.
         </style>
       </head>
       <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
         <script>
           let walker;
           function setup() {
