@@ -124,7 +124,7 @@ từ
 0 (bao gồm) đến 4 (không bao gồm), có nghĩa là nó không bao giờ thực sự là 4.0. Số cao nhất có thể tạo ra là ngay dưới
 4 - 3.999999999 (với nhiều số 9 nhất mà JavaScript cho phép), mà sau đó `floor()` sẽ cắt bớt xuống còn 3, loại bỏ phần
 thập phân. Do đó, tôi đã gán hiệu quả cho `choice` một giá trị là 0, 1, 2 hoặc 3.
-
+> [!NOTE]
 > ### Quy ước Lập trình
 >
 >Trong JavaScript, các biến có thể được khai báo bằng cách sử dụng `let` hoặc `const`. Một cách tiếp cận thông thường là
