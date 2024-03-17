@@ -191,7 +191,7 @@ function setup()   // Nhớ cách p5.js hoạt động không? setup() được 
 
 Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bước và vẽ một chấm.
 
-## Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
+### Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
 
 [![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
 
@@ -259,3 +259,49 @@ Thuận tiện thay, đây là cách hàm `random()` hoạt động. Bộ tạo 
 **một phân phối đồng đều** của các số. Bạn có thể kiểm tra phân phối này bằng cách đếm mỗi lần một số ngẫu nhiên được
 chọn
 và vẽ đồ thị các giá trị đó.
+
+### Ví dụ 0.2: Phân phối số ngẫu nhiên
+
+[![a-random-number-distribution.gif](videos/a-random-number-distribution.gif)](https://editor.p5js.org/natureofcode/sketches/u4vTwZuhT)
+
+```javascript
+let randomCounts = [];  // Một mảng để theo dõi tần suất các số ngẫu nhiên được chọn
+
+let total = 20; // Tổng số lần đếm
+
+function setup() {
+    createCanvas(640, 240);
+    for (let i = 0; i < total; i++) {
+        randomCounts[i] = 0;
+    }
+}
+
+function draw() {
+    background(255);
+    let index = floor(random(randomCounts.length));
+    randomCounts[index]++;
+    // Chọn một số ngẫu nhiên và tăng số lượng.
+
+    stroke(0);
+    fill(127);
+    let w = width / randomCounts.length;
+    for (let x = 0; x < randomCounts.length; x++) {
+        rect(x * w, height - randomCounts[x], w - 1, randomCounts[x]);
+    }
+    // Vẽ biểu đồ kết quả.
+}
+```
+
+Bạn sẽ thấy rằng mỗi thanh của biểu đồ khác nhau một chút về chiều cao. Kích thước mẫu (số lượng số ngẫu nhiên được
+chọn) là nhỏ, vì vậy sự khác biệt thỉnh thoảng xuất hiện khi một số số được chọn nhiều hơn các số khác. Theo thời gian,
+với một bộ tạo số ngẫu nhiên tốt, phân phối này sẽ cân đối.
+
+> [!NOTE]
+> ### Số Ngẫu Nhiên Giả
+>
+> Các số ngẫu nhiên từ hàm `random()` không hoàn toàn ngẫu nhiên; thay vào đó, chúng là **số ngẫu nhiên giả** vì chúng là kết quả của một hàm toán học chỉ mô phỏng sự ngẫu nhiên. Hàm này sẽ tạo ra một mô hình theo thời gian và do đó dừng lại dường như là ngẫu nhiên. Tuy nhiên, khoảng thời gian đó rất dài, vì vậy `random()` đủ ngẫu nhiên cho các ví dụ trong cuốn sách này.
+
+> [!IMPORTANT]
+> ### Bài tập 0.1
+>
+>Tạo một người đi bộ ngẫu nhiên có xu hướng di chuyển nhiều hơn về phía dưới và phải. (Giải pháp sẽ được trình bày trong phần tiếp theo.)
