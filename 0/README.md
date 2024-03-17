@@ -193,8 +193,7 @@ Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bư�
 
 ## Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
 
-<div style="text-align: center; margin-left: auto; margin-right: auto;">
-
+<div style="display: flex; justify-content: center; align-items: center;">
 
 [![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
 
