@@ -49,7 +49,8 @@ nơi hoàn hảo để bắt đầu với ba lý do sau:
 * Thỉnh thoảng, bạn sẽ cần hiểu biết cơ bản về tính ngẫu nhiên, xác suất và nhiễu Perlin cho các dự án trong cuốn sách
   này. Di chuyển ngẫu nhiên sẽ cho phép tôi chứng minh những điểm chính sẽ có ích sau này.
 
-Trước tiên tôi sẽ xem xét một chút về OOP bằng cách mã hóa lớp `Walker` để tạo các đối tượng `Walker` có thể di chuyển ngẫu
+Trước tiên tôi sẽ xem xét một chút về OOP bằng cách mã hóa lớp `Walker` để tạo các đối tượng `Walker` có thể di chuyển
+ngẫu
 nhiên. This will be only a cursory review. Nếu bạn chưa từng làm việc với OOP trước đây, bạn có thể muốn thứ gì đó toàn
 diện hơn; Tôi khuyên bạn nên dừng ở đây và
 xem [the “Objects” section of my “Code! Programming with p5.js” video course at the Coding Train website](https://thecodingtrain.com/objects).
@@ -192,7 +193,14 @@ Cuối cùng, trong mỗi chu kỳ qua `draw()`, `walker` di chuyển một bư�
 
 ## Ví dụ 0.1: Di chuyển ngẫu nhiên truyền thống
 
-[![random_walker.gif](videos/random_walker.gif)](https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR)
+<a href="https://editor.p5js.org/natureofcode/sketches/5C69XyrlsR">
+<img 
+    style="margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="videos/random_walker.gif" 
+    alt="Our logo"/>
+</a>
 
 ```javascript
 function draw() // draw() sẽ lặp đi lặp lại mãi mãi (cho đến khi bạn thoát).
@@ -214,7 +222,8 @@ hạn trong 4 lựa chọn: lên, xuống, trái và phải. Nhưng bất kỳ p
 |:----------------------------------------------------------------------------------:|
 | *Hình 0.1: Các bước của một người di chuyển ngẫu nhiên, có và không có đường chéo* |
 
-Để triển khai một đối tượng `Walker` có thể bước đến bất kỳ pixel xung quanh nào (hoặc ở yên), tôi có thể chọn một số từ 0
+Để triển khai một đối tượng `Walker` có thể bước đến bất kỳ pixel xung quanh nào (hoặc ở yên), tôi có thể chọn một số từ
+0
 đến 8 (chín lựa chọn có thể). Tuy nhiên, một cách khác để viết mã sẽ là chọn từ ba bước có thể dọc theo trục x (-1, 0,
 hoặc 1) và ba bước có thể dọc theo trục y:
 
@@ -230,7 +239,8 @@ step()
 }
 ```
 
-Tối ưu hơn, tôi có thể loại bỏ `floor()` và sử dụng số dấu phẩy động gốc của hàm `random()` để tạo ra một phạm vi liên tục
+Tối ưu hơn, tôi có thể loại bỏ `floor()` và sử dụng số dấu phẩy động gốc của hàm `random()` để tạo ra một phạm vi liên
+tục
 của các độ dài bước có thể từ -1 đến 1, như sau:
 
 ```javascript
@@ -245,11 +255,14 @@ step()
 }
 ```
 
-Tất cả những biến thể này trên cuộc di chuyển ngẫu nhiên truyền thống đều có một điểm chung: vào bất kỳ thời điểm nào, xác
+Tất cả những biến thể này trên cuộc di chuyển ngẫu nhiên truyền thống đều có một điểm chung: vào bất kỳ thời điểm nào,
+xác
 suất mà người di chuyển sẽ đi theo một hướng nhất định bằng với xác suất mà người di chuyển sẽ đi theo bất kỳ hướng
-nào khác. Nói cách khác, nếu có bốn bước có thể, thì có 1 trong 4 (hoặc 25 phần trăm) cơ hội người di chuyển sẽ thực hiện
+nào khác. Nói cách khác, nếu có bốn bước có thể, thì có 1 trong 4 (hoặc 25 phần trăm) cơ hội người di chuyển sẽ thực
+hiện
 bất kỳ bước nào. Với chín bước có thể, đó là một cơ hội 1 trong 9 (khoảng 11,1 phần trăm).
 
 Thuận tiện thay, đây là cách hàm `random()` hoạt động. Bộ tạo số ngẫu nhiên của p5.js (hoạt động ẩn) tạo ra
-**một phân phối đồng đều** của các số. Bạn có thể kiểm tra phân phối này bằng cách đếm mỗi lần một số ngẫu nhiên được chọn
+**một phân phối đồng đều** của các số. Bạn có thể kiểm tra phân phối này bằng cách đếm mỗi lần một số ngẫu nhiên được
+chọn
 và vẽ đồ thị các giá trị đó.
