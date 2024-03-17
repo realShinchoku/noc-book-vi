@@ -64,15 +64,6 @@ nghĩa là gì khi là một người đi bộ.
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 <foreignObject width="100" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml">
-        <style>
-          html, body {
-           margin: 0;
-           padding: 0;
-          }
-          canvas {
-            display: block;
-          }
-        </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
         <script>
           let walker;
