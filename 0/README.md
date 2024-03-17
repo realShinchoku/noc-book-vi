@@ -62,4 +62,4 @@ tượng như chính các chiếc bánh quy. Để tạo một đối tượng `
 nghĩa là gì khi là một người đi bộ.
 
 
-![random_walker](videos/random_walker.webm)
+![random_walker](videos/random_walker.mp4)
