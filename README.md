@@ -1,7 +1,5 @@
 ﻿# THE **NATURE** OF CODE
 
----
-
 ## Mục lục
 
 * [Giới thiệu](./introduction/README.md)
