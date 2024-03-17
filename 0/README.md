@@ -92,7 +92,6 @@ khi tham chiếu đến các thuộc tính (biến) của đối tượng đó:
 
 ```javascript
 show() // Đối tượng có phương thức.
-
 {
     stroke(0);
     point(this.x, this.y);
