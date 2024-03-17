@@ -11,7 +11,7 @@ quen lại với tư duy tính toán. Để bắt đầu hành trình lập trì
 số công cụ cơ bản cho việc lập trình mô phỏng: số ngẫu nhiên, phân phối ngẫu nhiên và nhiễu. Hãy nghĩ về điều này như là
 phần đầu tiên (thứ 0!) của cuốn sách này - một bài học cơ bản và một lối vào cho những khả năng sẽ mở ra phía trước.
 
-![00_randomness_2](image/00_randomness_2.webp)
+![00_randomness_2](images/00_randomness_2.webp)
 
 Trong Chương 1, tôi sẽ nói về khái niệm của một vector và cách nó sẽ phục vụ như một khối xây dựng cho việc mô phỏng
 chuyển động trong suốt cuốn sách này. Nhưng trước khi tiến xa vào đó, hãy suy nghĩ về điều gì đó có nghĩa khi một vật
@@ -61,44 +61,5 @@ có dữ liệu về vị trí của nó trên khung vẽ và chức năng như 
 tượng như chính các chiếc bánh quy. Để tạo một đối tượng `Walker`, tôi sẽ bắt đầu bằng cách định nghĩa lớp `Walker`
 nghĩa là gì khi là một người đi bộ.
 
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-<foreignObject width="100" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
-        <script>
-          let walker;
-          function setup() {
-            createCanvas(640, 240);
-            walker = new Walker();
-            background(255);
-          }
-          function draw() {
-            walker.step();
-            walker.show();
-          }
-          class Walker {
-            constructor() {
-              this.x = width / 2;
-              this.y = height / 2;
-            }
-            show() {
-              stroke(0);
-              point(this.x, this.y);
-            }
-            step() {
-              const choice = floor(random(4));
-              if (choice == 0) {
-                this.x++;
-              } else if (choice == 1) {
-                this.x--;
-              } else if (choice == 2) {
-                this.y++;
-              } else {
-                this.y--;
-              }
-            }
-          }
-        </script>
-    </div>
-</foreignObject>
-</svg>
+
+![random_walker](videos/random_walker.webm)
