@@ -211,7 +211,7 @@ Tôi có thể điều chỉnh một vài thứ cho người di chuyển ngẫu 
 hạn trong 4 lựa chọn: lên, xuống, trái và phải. Nhưng bất kỳ pixel nào trên bảng vẽ cũng có 8 ô xung quanh, bao gồm cả
 đường chéo (xem Hình 0.1). Một khả năng thứ chín, để ở lại chỗ cũ, cũng có thể là một lựa chọn.
 
-|               ![00_randomness_3.webp](images%2F00_randomness_3.webp)               |
+|                ![00_randomness_3.webp](images/00_randomness_3.webp)                |
 |:----------------------------------------------------------------------------------:|
 | *Hình 0.1: Các bước của một người di chuyển ngẫu nhiên, có và không có đường chéo* |
 
