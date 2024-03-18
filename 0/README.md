@@ -326,9 +326,7 @@ Nếu bạn có một tình huống mà mỗi kết quả cũng có khả năng 
 
 Lấy một bộ 52 lá bài. Xác suất rút một lá át từ bộ bài đó như sau:
 
-$$
-số\,lượng\,át / số\,lượng\,bài = 4/52 = 0.077 ≈ 8%
-$$
+$số\,lượng\,át / số\,lượng\,bài = 4/52 = 0.077 ≈ 8% $
 
 Xác suất rút một lá bài cơ từ bộ bài được hiển thị ở đây:
 
