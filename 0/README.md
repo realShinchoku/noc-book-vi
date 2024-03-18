@@ -330,10 +330,16 @@ $$
 số\ lượng\ át / số\ lượng\ bài = 4/52 = 0.077 ≈ 8%
 $$
 
-Xác suất rút một lá bài cơ từ bộ bài được hiển thị ở đây:
+Xác suất rút một lá bài rô từ bộ bài được hiển thị ở đây:
 
-số lượng bài cơ / số lượng bài = 13/52 = 0.25 = 25%
-Bạn cũng có thể tính xác suất của nhiều sự kiện xảy ra liên tiếp bằng cách nhân các xác suất cá nhân của mỗi sự kiện. Ví dụ, đây là xác suất của một đồng xu lên mặt ngửa ba lần liên tiếp:
+$$
+số\ lượng\ bài\ rô / số\ lượng\ bài = 13/52 = 0.25 = 25%
+$$
 
+Bạn cũng có thể tính xác suất của nhiều sự kiện xảy ra liên tiếp bằng cách nhân các xác suất của mỗi sự kiện. Ví dụ, đây là xác suất của một đồng xu lên mặt ngửa ba lần liên tiếp:
+
+$$
 (1/2)×(1/2)×(1/2)=1/8=0.125=12.5%
+$$
+
 Điều này chỉ ra rằng một đồng xu sẽ lên mặt ngửa ba lần liên tiếp một trong tám lần trung bình. Nếu bạn tung một đồng xu ba lần liên tiếp 500 lần, bạn sẽ mong đợi thấy kết quả của ba lần ngửa liên tiếp trung bình một phần tám lần, hoặc khoảng 63 lần.
