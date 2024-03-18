@@ -1,4 +1,5 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FrealShinchoku%2Fnoc-book-vi%2Ftree%2Fmain%2F0&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=view&edge_flat=false)](https://hits.seeyoufarm.com)
+
 # Chương 0: Sự ngẫu nhiên
 
 > **The generation of random numbers is**
@@ -300,9 +301,39 @@ với một bộ tạo số ngẫu nhiên tốt, phân phối này sẽ cân đ�
 > [!NOTE]
 > ### Số Ngẫu Nhiên Giả
 >
-> Các số ngẫu nhiên từ hàm `random()` không hoàn toàn ngẫu nhiên; thay vào đó, chúng là **số ngẫu nhiên giả** vì chúng là kết quả của một hàm toán học chỉ mô phỏng sự ngẫu nhiên. Hàm này sẽ tạo ra một mô hình theo thời gian và do đó dừng lại dường như là ngẫu nhiên. Tuy nhiên, khoảng thời gian đó rất dài, vì vậy `random()` đủ ngẫu nhiên cho các ví dụ trong cuốn sách này.
+> Các số ngẫu nhiên từ hàm `random()` không hoàn toàn ngẫu nhiên; thay vào đó, chúng là **số ngẫu nhiên giả** vì chúng
+> là kết quả của một hàm toán học chỉ mô phỏng sự ngẫu nhiên. Hàm này sẽ tạo ra một mô hình theo thời gian và do đó dừng
+> lại dường như là ngẫu nhiên. Tuy nhiên, khoảng thời gian đó rất dài, vì vậy `random()` đủ ngẫu nhiên cho các ví dụ trong
+> cuốn sách này.
 
 > [!IMPORTANT]
 > ### Bài tập 0.1
 >
->Tạo một người đi bộ ngẫu nhiên có xu hướng di chuyển nhiều hơn về phía dưới và phải. (Giải pháp sẽ được trình bày trong phần tiếp theo.)
+> Tạo một người đi bộ ngẫu nhiên có xu hướng di chuyển nhiều hơn về phía dưới và phải. (Giải pháp sẽ được trình bày
+> trong phần tiếp theo.)
+
+## Xác suất và phân phối không đồng đều
+
+Sự ngẫu nhiên đồng đều thường không phải là giải pháp sáng tạo nhất cho một vấn đề thiết kế, đặc biệt là loại vấn đề liên quan đến việc xây dựng một mô phỏng tự nhiên hoặc có vẻ tự nhiên. Tuy nhiên, với một vài mẹo, hàm `random()` có thể tạo ra các phân phối số ngẫu nhiên không đồng đều, nơi mà một số kết quả có khả năng xảy ra hơn những kết quả khác. Loại phân phối này có thể tạo ra kết quả thú vị hơn, dường như tự nhiên hơn.
+
+Hãy nghĩ về khi bạn mới bắt đầu lập trình với p5.js. Có lẽ bạn muốn vẽ rất nhiều hình tròn trên màn hình, bạn tự nhủ rằng, "Ồ, tôi biết! Tôi sẽ vẽ tất cả những hình tròn này ở các vị trí ngẫu nhiên, với kích thước ngẫu nhiên và màu sắc ngẫu nhiên." Việc thiết lập ngẫu nhiên cho một hệ thống là một điểm bắt đầu hoàn toàn hợp lý khi bạn đang học cơ bản về đồ họa máy tính, nhưng trong cuốn sách này, tôi đang tìm cách xây dựng các hệ thống mô phỏng những gì chúng ta thấy trong tự nhiên, và sự ngẫu nhiên đồng đều không phải lúc nào cũng phù hợp. _Đôi khi bạn phải đặt ngón tay của mình lên khi cân một chút._
+
+Việc tạo ra một phân phối số ngẫu nhiên không đồng đều sẽ hữu ích trong suốt cuốn sách. Ví dụ, trong Chương 9 về thuật toán di truyền, tôi sẽ cần một phương pháp để thực hiện lựa chọn:những thành viên nào của quần thể nên được chọn để truyền DNA của họ cho thế hệ tiếp theo? Điều này giống với khái niệm Darwin về kẻ sống sót phù hợp nhất. Giả sử bạn có một quần thể khỉ đang tiến hóa. Không phải mọi con khỉ đều có cơ hội sinh sản bằng nhau. Để mô phỏng lựa chọn tự nhiên theo Darwin, bạn không thể chỉ chọn ngẫu nhiên hai con khỉ để làm cha mẹ. Những con "phù hợp" hơn nên có khả năng được chọn nhiều hơn. Điều này có thể được coi là xác suất của _những kẻ phù hợp nhất_.
+
+Hãy để tôi tạm dừng ở đây và xem xét các nguyên tắc cơ bản của xác suất để tôi có thể áp dụng các từ ngữ chính xác hơn cho các ví dụ sắp tới. Tôi sẽ bắt đầu với **xác suất sự kiện đơn** - khả năng một sự kiện nhất định sẽ xảy ra. Trong xác suất, **kết quả** đề cập đến tất cả các trường hợp có thể của một quá trình ngẫu nhiên, và **một sự kiện** là kết quả cụ thể hoặc kết hợp của các kết quả đang được xem xét.
+
+Nếu bạn có một tình huống mà mỗi kết quả cũng có khả năng xảy ra như những kết quả khác, xác suất của một sự kiện nhất định xảy ra bằng số lượng kết quả phù hợp với sự kiện đó chia cho tổng số tất cả các kết quả tiềm năng. Một lần tung đồng xu là một ví dụ đơn giản: nó chỉ có hai kết quả có thể, mặt ngửa hoặc mặt sấp. Chỉ có một mặt ngửa, vì vậy xác suất rằng đồng xu sẽ lên mặt ngửa là 1 chia cho 2: 1/2, hoặc 50 phần trăm.
+
+Lấy một bộ 52 lá bài. Xác suất rút một lá át từ bộ bài đó như sau:
+
+$$
+số lượng át / số lượng bài = 4/52 = 0.077 ≈ 8%
+$$
+
+Xác suất rút một lá bài cơ từ bộ bài được hiển thị ở đây:
+
+số lượng bài cơ / số lượng bài = 13/52 = 0.25 = 25%
+Bạn cũng có thể tính xác suất của nhiều sự kiện xảy ra liên tiếp bằng cách nhân các xác suất cá nhân của mỗi sự kiện. Ví dụ, đây là xác suất của một đồng xu lên mặt ngửa ba lần liên tiếp:
+
+(1/2)×(1/2)×(1/2)=1/8=0.125=12.5%
+Điều này chỉ ra rằng một đồng xu sẽ lên mặt ngửa ba lần liên tiếp một trong tám lần trung bình. Nếu bạn tung một đồng xu ba lần liên tiếp 500 lần, bạn sẽ mong đợi thấy kết quả của ba lần ngửa liên tiếp trung bình một phần tám lần, hoặc khoảng 63 lần.
