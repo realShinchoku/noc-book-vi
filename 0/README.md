@@ -327,19 +327,19 @@ Nếu bạn có một tình huống mà mỗi kết quả cũng có khả năng 
 Lấy một bộ 52 lá bài. Xác suất rút một lá át từ bộ bài đó như sau:
 
 $$
-số\ lượng\ át / số\ lượng\ bài = 4/52 = 0.077 ≈ 8\%
+số\ lượng\ át / số\ lượng\ bài = 4/52 = 0.077 ≈ 8 \%
 $$
 
 Xác suất rút một lá bài rô từ bộ bài được hiển thị ở đây:
 
 $$
-số\ lượng\ bài\ rô / số\ lượng\ bài = 13/52 = 0.25 = 25\%
+số\ lượng\ bài\ rô / số\ lượng\ bài = 13/52 = 0.25 = 25 \%
 $$
 
 Bạn cũng có thể tính xác suất của nhiều sự kiện xảy ra liên tiếp bằng cách nhân các xác suất của mỗi sự kiện. Ví dụ, đây là xác suất của một đồng xu lên mặt ngửa ba lần liên tiếp:
 
 $$
-(1/2)×(1/2)×(1/2)=1/8=0.125=12.5\%
+(1/2)×(1/2)×(1/2)=1/8=0.125=12.5 \%
 $$
 
 Điều này chỉ ra rằng một đồng xu sẽ lên mặt ngửa ba lần liên tiếp một trong tám lần trung bình. Nếu bạn tung một đồng xu ba lần liên tiếp 500 lần, bạn sẽ mong đợi thấy kết quả của ba lần ngửa liên tiếp trung bình một phần tám lần, hoặc khoảng 63 lần.
